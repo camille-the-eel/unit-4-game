@@ -23,7 +23,7 @@ function gameReset () {
 $("#wins").html("Wins: " + wins);
 $("#losses").html("Losses: " + losses);
 $("#score").html(score);
-$("#computerNumber").html("Computer's Number: " + computerNumber);
+$("#computerNumber").html("Head Miner's Crystal Amount: " + computerNumber);
 
 //GAME PLAY
 //----------------------------------------------------
