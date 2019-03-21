@@ -1,4 +1,4 @@
-# crystal-collector-game
+# Crystal Collector Game
 
 You can only take home your crystals if your collection is equal to the head miner's! Blackjack style gameplay.
 
