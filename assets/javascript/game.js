@@ -14,12 +14,15 @@ function gameSet () {
     //JQUERY LINKS TO HTML CLASSES
     $("#wins").html("Wins: " + wins);
     $("#losses").html("Losses: " + losses);
-    $("#score").html(score);
 
+    score = 0;
+    $("#score").html(score);
+    
     crystalAssignment();
     computerAssignment();
     crystalClick();
-}
+
+};
 
 
 //GENERATES NEW RANDOM VALUES FOR CRYSTALS
@@ -42,7 +45,7 @@ function crystalAssignment () {
 function computerAssignment () {
     computerNumber = Math.floor(Math.random() * 101) + 19;
     $("#computerNumber").html("Head Miner's Crystal Amount: " + computerNumber);
-}
+};
 
 function crystalClick () {
     $(".crystal").on("click", function() {
@@ -52,30 +55,40 @@ function crystalClick () {
         $("#score").html(score);
 
         console.log("SCORE", score, " COMPUTER", computerNumber);
-
-        scoreLogic();
+        setTimeout(scoreLogic, 500);
     });
-}
+};
 
 //GAME LOGIC
 function scoreLogic () {
+
     if (score > computerNumber) {
         $(".crystal").off('click');
         console.log("You Lose!");
-        alert("You Lost");
+        lossDisplay();
         losses++;
-        score = 0;
         gameSet();
     }
     else if (score === computerNumber) {
         $(".crystal").off('click');
         console.log("You won!");
-        alert("You Win");
+        winDisplay();
         wins++;
-        score = 0;
         gameSet();
     }
-}
+};
+
+function lossDisplay () {
+
+    alert("You Lose! Final Score: " + score + " Head Miner: " + computerNumber);
+
+};
+
+function winDisplay () {
+
+    alert("You Win! Final Score: " + score + " Head Miner: " + computerNumber);
+
+};
 
 //STARTS GAME
 gameSet();
