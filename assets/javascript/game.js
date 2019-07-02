@@ -5,34 +5,30 @@ var losses = 0;
 var score = 0;
 var computerNumber = Math.floor(Math.random() * 101) + 19;
 var crystalAmount = [];
+var randomCrystalValue;
+var randomCrystalNumber;
 
-//GAME RESET
-//----------------------------------------------------
-function gameReset () {
+//GAME SETUP AND START
+function gameSet () {
 
-    //RESETS VARIABLE FOR SCORE
-    score = 0;
-    //GENERATES NEW RANDOM NUMBER FOR COMPUTER
-    computerNumber = Math.floor(Math.random() * 101) + 19;
-    //CALLS CRYSTAL FUNCTION FOR NEW RANDOM VALUES
+    //JQUERY LINKS TO HTML CLASSES
+    $("#wins").html("Wins: " + wins);
+    $("#losses").html("Losses: " + losses);
+    $("#score").html(score);
+
     crystalAssignment();
+    computerAssignment();
+    crystalClick();
 }
 
-//VARIABLES FOR LINKING JQUERY TO HTML CLASSES
-//-----------------------------------------------------
-$("#wins").html("Wins: " + wins);
-$("#losses").html("Losses: " + losses);
-$("#score").html(score);
-$("#computerNumber").html("Head Miner's Crystal Amount: " + computerNumber);
 
-//GAME PLAY
-//----------------------------------------------------
+//GENERATES NEW RANDOM VALUES FOR CRYSTALS
 function crystalAssignment () {
 
     for (i = 0; i < 4; i++) {
     crystalAmount[i] = Math.floor(Math.random() * 12) + 1;
     crystalAmount.push[i];
-    console.log(crystalAmount[i]);
+    // console.log(crystalAmount[i]);
     };
 
     $("#red").attr("crystal-Value", crystalAmount[0]);
@@ -41,25 +37,45 @@ function crystalAssignment () {
     $("#blue").attr("crystal-Value", crystalAmount[3]);
 
 };
-crystalAssignment();
 
-$(".crystal").on("click", function() {
-    var randomCrystalNumber = ($(this).attr("crystal-Value"));
-    randomCrystalNumber = parseInt(randomCrystalNumber);
-    score += randomCrystalNumber;
-    $("#score").html(score);
-    console.log(randomCrystalNumber);
-});
+//GENERATES NEW RANDOM NUMBER FOR COMPUTER
+function computerAssignment () {
+    computerNumber = Math.floor(Math.random() * 101) + 19;
+    $("#computerNumber").html("Head Miner's Crystal Amount: " + computerNumber);
+}
+
+function crystalClick () {
+    $(".crystal").on("click", function() {
+        randomCrystalValue = ($(this).attr("crystal-Value"));
+        randomCrystalNumber = parseInt(randomCrystalValue);
+        score += randomCrystalNumber;
+        $("#score").html(score);
+
+        console.log("SCORE", score, " COMPUTER", computerNumber);
+
+        scoreLogic();
+    });
+}
 
 //GAME LOGIC
-//-------------------------------------------------------
-if (score === computerNumber) {
-    console.log("You won!");
-    wins++;
-    gameReset();
+function scoreLogic () {
+    if (score > computerNumber) {
+        $(".crystal").off('click');
+        console.log("You Lose!");
+        alert("You Lost");
+        losses++;
+        score = 0;
+        gameSet();
+    }
+    else if (score === computerNumber) {
+        $(".crystal").off('click');
+        console.log("You won!");
+        alert("You Win");
+        wins++;
+        score = 0;
+        gameSet();
+    }
 }
-else if (score > computerNumber) {
-    console.log("You Lose!");
-    losses++;
-    gameReset();
-}
+
+//STARTS GAME
+gameSet();
