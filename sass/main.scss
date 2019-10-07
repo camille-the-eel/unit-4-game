@@ -1,0 +1,42 @@
+$font-stack: cubano, sans-serif;
+$light-blue: #81daef;
+$dark-blue: #38356d;
+$brown: #492d14;
+
+body {
+    margin: 0px;
+}
+
+.instructions {
+    background-color: $light-blue;
+    width: auto;
+    height: 65vh;
+    font-family: $font-stack;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: .15px;
+
+
+    h1 {
+    font-size: 80px;
+    margin: 0px;
+    padding-top: 5vh;
+    padding-bottom: 4vh;
+    }
+
+    p {
+    padding-top: 1vh;
+    max-width: 600px;
+    margin: auto;
+    font-size: 30px;
+    }
+}
+
+.ground {
+    background-image: url(../assets/imgs/crystal_assets_grass.svg);
+    background-size: contain;
+    height: 175px;
+    background-repeat: repeat-x;
+}
