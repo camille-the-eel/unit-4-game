@@ -11,6 +11,7 @@ jQuery and dynamically updated HTML through user click events.
 - Javascript
 - jQuery
 - CSS
+- SASS
 
 ====================================================================================
 

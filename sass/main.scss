@@ -10,6 +10,8 @@ body {
 .instructions {
     background-color: $light-blue;
     width: auto;
+    padding-left: 7%;
+    padding-right: 7%;
     height: 65vh;
     font-family: $font-stack;
     font-weight: 400;
@@ -17,12 +19,16 @@ body {
     color: #ffffff;
     text-align: center;
     letter-spacing: .15px;
-
+    background-image: url(../assets/imgs/crystal_assets_man.svg);
+    background-size: 125px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-origin: content-box;
 
     h1 {
     font-size: 80px;
     margin: 0px;
-    padding-top: 5vh;
+    padding-top: 7vh;
     padding-bottom: 4vh;
     }
 

@@ -4,17 +4,24 @@ body {
 .instructions {
   background-color: #81daef;
   width: auto;
+  padding-left: 7%;
+  padding-right: 7%;
   height: 65vh;
   font-family: cubano, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #ffffff;
   text-align: center;
-  letter-spacing: .15px; }
+  letter-spacing: .15px;
+  background-image: url(../assets/imgs/crystal_assets_man.svg);
+  background-size: 125px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-origin: content-box; }
   .instructions h1 {
     font-size: 80px;
     margin: 0px;
-    padding-top: 5vh;
+    padding-top: 7vh;
     padding-bottom: 4vh; }
   .instructions p {
     padding-top: 1vh;
@@ -23,7 +30,7 @@ body {
     font-size: 30px; }
 
 .ground {
-  background-image: url(../assets/imgs/crystal_assets-grass.svg);
+  background-image: url(../assets/imgs/crystal_assets_grass.svg);
   background-size: contain;
   height: 175px;
   background-repeat: repeat-x; }
