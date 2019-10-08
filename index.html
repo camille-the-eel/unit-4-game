@@ -12,35 +12,45 @@
 <body>
     <div class="instructions">
         <h1>Crystal Collector</h1>
-        <p>Win the game by matching your haul to the head miner's haul. You lose if your total goes above the head miner's. Stop making him look bad, geez!</p>
+        <p>Win the game by matching your haul to the head miner's haul. You lose if your total goes above the head miner's. (Stop making him look bad, geez!)</p>
         <br/>
         <p>The value of each crystal is hidden from you until you click on it. Each time the game starts, the value of the crystals will change.</p>
     </div>
 
-    <div class="ground">
+    <div class="grass">
     </div>
 
-    <div class="numbers">
-        <div id="computerNumber"></div>
-        <div id="wins"></div>
-        <div id="losses"></div>
-        <div>
-            <p>Your Crystal Collection Total is: <span id="score"></span></p>
+    <div class="play">
+        <h2>
+            PLAY
+            <img src="assets/imgs/crystal_assets_red.svg">
+        </h2>
+
+        <div class="crystal-holder"></div>
+            <div id="red" class="crystal">
+                <img src="assets/imgs/crystal_assets_red.svg">
+            </div>
+            <div id="yellow" class="crystal">
+                <img src="assets/imgs/crystal_assets_yellow.svg">
+            </div>
+            <div id="blue" class="crystal">
+                <img src="assets/imgs/crystal_assets_green.svg">
+            </div>
+            <div id="orange" class="crystal">
+                <img src="assets/imgs/crystal_assets_blue.svg">
+            </div>
         </div>
     </div>
 
-    <div class="crystal-holder"></div>
-        <div id="red" class="crystal">
-            <img src="assets/images/red_crystal.png">
+    <div class="underground">
+        <div class="numbers">
+            <h2>Head Miner's Haul: <span id="computerNumber"></span></h2>
+            <h2>Your Haul: <span id="score"></span></h2>
         </div>
-        <div id="yellow" class="crystal">
-            <img src="assets/images/yellow_crystal.png">
-        </div>
-        <div id="blue" class="crystal">
-            <img src="assets/images/blue_crystal.png">
-        </div>
-        <div id="orange" class="crystal">
-            <img src="assets/images/orange_crystal.png">
+
+        <div class="score">
+            <h2 id="wins"></h2>
+            <h2 id="losses"></h2>
         </div>
     </div>
 

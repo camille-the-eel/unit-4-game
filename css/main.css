@@ -6,7 +6,7 @@ body {
   width: auto;
   padding-left: 7%;
   padding-right: 7%;
-  height: 65vh;
+  height: 70vh;
   font-family: cubano, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -19,18 +19,60 @@ body {
   background-position: left bottom;
   background-origin: content-box; }
   .instructions h1 {
-    font-size: 80px;
+    font-size: 100px;
     margin: 0px;
-    padding-top: 7vh;
-    padding-bottom: 4vh; }
+    padding-top: 11vh;
+    padding-bottom: 5vh; }
   .instructions p {
     padding-top: 1vh;
-    max-width: 600px;
+    max-width: 775px;
     margin: auto;
     font-size: 30px; }
 
-.ground {
+.grass {
   background-image: url(../assets/imgs/crystal_assets_grass.svg);
   background-size: contain;
-  height: 175px;
-  background-repeat: repeat-x; }
+  height: 190px;
+  background-repeat: repeat-x;
+  position: relative; }
+
+.play {
+  background-color: #38356d;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: .15px;
+  margin-top: -120px;
+  height: 650px; }
+  .play h2 {
+    font-family: cubano, sans-serif;
+    padding-top: 10vh; }
+  .play img {
+    width: 60px; }
+
+.crystal {
+  width: 75px;
+  display: inline-block; }
+
+.underground {
+  background-image: url(../assets/imgs/crystal_assets_underground-04.svg);
+  background-size: contain;
+  height: 450px;
+  background-repeat: repeat-x;
+  position: relative;
+  margin-top: -50px; }
+  .underground div > h2 {
+    font-family: cubano, sans-serif;
+    color: #492d14;
+    letter-spacing: .15px;
+    margin: 0px; }
+  .underground .numbers {
+    padding-top: 6vh;
+    padding-right: 3vh;
+    font-size: 30px;
+    text-align: right; }
+  .underground .score {
+    padding-left: 3vh;
+    font-size: 25px; }

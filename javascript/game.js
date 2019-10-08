@@ -44,7 +44,7 @@ function crystalAssignment () {
 //GENERATES NEW RANDOM NUMBER FOR COMPUTER
 function computerAssignment () {
     computerNumber = Math.floor(Math.random() * 101) + 19;
-    $("#computerNumber").html("Head Miner's Crystal Amount: " + computerNumber);
+    $("#computerNumber").html(computerNumber);
 };
 
 function crystalClick () {
