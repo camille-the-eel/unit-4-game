@@ -17,6 +17,6 @@ jQuery and dynamically updated HTML through user click events.
 
 **Wireframes**
 
-![Static Wireframe: Start](assets/img/wireframe_start_crystal.png)
+![Static Wireframe: Start](assets/imgs/wireframe_start_crystal.png)
 
-![Static Wireframe: Game Play](assets/img/wireframe_play_crystal.png)
+![Static Wireframe: Game Play](assets/imgs/wireframe_play_crystal.png)
