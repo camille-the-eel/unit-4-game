@@ -7,6 +7,12 @@ body {
     margin: 0px;
 }
 
+a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+
 .instructions {
     background-color: $light-blue;
     width: auto;
@@ -56,14 +62,19 @@ body {
     position: relative;
     text-align: center;
 
-    button {
-        font-family: $font-stack;
-        font-weight: 400;
-        font-style: normal;
-        color: #ffffff;
-        font-size: 65px;
-        letter-spacing: .15px;
-        margin-top: 12vh;
+    // button {
+    //     font-family: $font-stack;
+    //     font-weight: 400;
+    //     font-style: normal;
+    //     color: #ffffff;
+    //     font-size: 65px;
+    //     letter-spacing: .15px;
+    //     margin-top: 12vh;
+    // }
+
+    //delete lines 75-78 when play btn added
+    #crystal-holder {
+        padding-top: 20vh;
     }
 
     img {

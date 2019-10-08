@@ -92,3 +92,8 @@ function winDisplay () {
 
 //STARTS GAME
 gameSet();
+
+//STYLING FUNCTIONALITY
+// $("#play-btn").click(function() {
+//     $("button").hide();
+// });

@@ -1,6 +1,10 @@
 body {
   margin: 0px; }
 
+a {
+  color: #ffffff;
+  text-decoration: none; }
+
 .instructions {
   background-color: #81daef;
   width: auto;
@@ -32,7 +36,7 @@ body {
 .grass {
   background-image: url(../assets/imgs/crystal_assets_grass.svg);
   background-size: contain;
-  height: 170px;
+  height: 150px;
   background-repeat: repeat-x;
   position: relative;
   z-index: 2; }
@@ -43,14 +47,8 @@ body {
   height: 61vh;
   position: relative;
   text-align: center; }
-  .play button {
-    font-family: cubano, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #ffffff;
-    font-size: 65px;
-    letter-spacing: .15px;
-    margin-top: 12vh; }
+  .play #crystal-holder {
+    padding-top: 20vh; }
   .play img {
     width: 60px; }
   .play #girl {
