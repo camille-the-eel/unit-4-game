@@ -57,7 +57,7 @@ body {
   display: inline-block; }
 
 .underground {
-  background-image: url(../assets/imgs/crystal_assets_underground-04.svg);
+  background-image: url(../assets/imgs/crystal_assets_underground.svg);
   background-size: contain;
   height: 450px;
   background-repeat: repeat-x;
