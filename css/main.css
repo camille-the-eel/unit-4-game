@@ -34,27 +34,37 @@ body {
   background-size: contain;
   height: 190px;
   background-repeat: repeat-x;
-  position: relative; }
+  position: relative;
+  z-index: 2; }
 
 .play {
   background-color: #38356d;
-  font-weight: 400;
-  font-style: normal;
-  color: #ffffff;
-  text-align: center;
-  font-size: 45px;
-  letter-spacing: .15px;
   margin-top: -120px;
-  height: 650px; }
-  .play h2 {
+  height: 61vh;
+  position: relative;
+  text-align: center; }
+  .play button {
     font-family: cubano, sans-serif;
-    padding-top: 10vh; }
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 65px;
+    letter-spacing: .15px;
+    margin-top: 12vh; }
   .play img {
     width: 60px; }
+  .play #girl {
+    width: 125px;
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    z-index: 10; }
 
 .crystal {
-  width: 75px;
+  width: 135px;
   display: inline-block; }
+  .crystal img {
+    width: 100px; }
 
 .underground {
   background-image: url(../assets/imgs/crystal_assets_underground.svg);
@@ -62,6 +72,7 @@ body {
   height: 450px;
   background-repeat: repeat-x;
   position: relative;
+  overflow: hidden;
   margin-top: -50px; }
   .underground div > h2 {
     font-family: cubano, sans-serif;
@@ -71,8 +82,14 @@ body {
   .underground .numbers {
     padding-top: 6vh;
     padding-right: 3vh;
-    font-size: 30px;
+    font-size: 50px;
     text-align: right; }
   .underground .score {
     padding-left: 3vh;
-    font-size: 25px; }
+    font-size: 45px;
+    position: absolute;
+    bottom: 3vh; }
+  .underground #haul {
+    padding-top: 1vh; }
+  .underground #losses {
+    padding-top: .75vh; }

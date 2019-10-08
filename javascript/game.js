@@ -2,7 +2,7 @@
 //-----------------------------------------------------
 var wins = 0;
 var losses = 0;
-var score = 0;
+var haul = 0;
 var computerNumber = Math.floor(Math.random() * 101) + 19;
 var crystalAmount = [];
 var randomCrystalValue;
@@ -15,8 +15,8 @@ function gameSet () {
     $("#wins").html("Wins: " + wins);
     $("#losses").html("Losses: " + losses);
 
-    score = 0;
-    $("#score").html(score);
+    haul = 0;
+    $("#yourHaul").html(haul);
     
     crystalAssignment();
     computerAssignment();
@@ -36,7 +36,7 @@ function crystalAssignment () {
 
     $("#red").attr("crystal-Value", crystalAmount[0]);
     $("#yellow").attr("crystal-Value", crystalAmount[1]);
-    $("#orange").attr("crystal-Value", crystalAmount[2]);
+    $("#green").attr("crystal-Value", crystalAmount[2]);
     $("#blue").attr("crystal-Value", crystalAmount[3]);
 
 };
@@ -44,17 +44,17 @@ function crystalAssignment () {
 //GENERATES NEW RANDOM NUMBER FOR COMPUTER
 function computerAssignment () {
     computerNumber = Math.floor(Math.random() * 101) + 19;
-    $("#computerNumber").html(computerNumber);
+    $("#computerHaul").html(computerNumber);
 };
 
 function crystalClick () {
     $(".crystal").on("click", function() {
         randomCrystalValue = ($(this).attr("crystal-Value"));
         randomCrystalNumber = parseInt(randomCrystalValue);
-        score += randomCrystalNumber;
-        $("#score").html(score);
+        haul += randomCrystalNumber;
+        $("#yourHaul").html(haul);
 
-        console.log("SCORE", score, " COMPUTER", computerNumber);
+        console.log("YOUR HAUL", haul, " COMPUTER HAUL", computerNumber);
         setTimeout(scoreLogic, 500);
     });
 };
@@ -62,14 +62,14 @@ function crystalClick () {
 //GAME LOGIC
 function scoreLogic () {
 
-    if (score > computerNumber) {
+    if (haul > computerNumber) {
         $(".crystal").off('click');
         console.log("You Lose!");
         lossDisplay();
         losses++;
         gameSet();
     }
-    else if (score === computerNumber) {
+    else if (haul === computerNumber) {
         $(".crystal").off('click');
         console.log("You won!");
         winDisplay();
@@ -80,13 +80,13 @@ function scoreLogic () {
 
 function lossDisplay () {
 
-    alert("You Lose! Final Score: " + score + " Head Miner: " + computerNumber);
+    alert("You Lose! Final Haul: " + haul + " Head Miner: " + computerNumber);
 
 };
 
 function winDisplay () {
 
-    alert("You Win! Final Score: " + score + " Head Miner: " + computerNumber);
+    alert("You Win! Final Haul: " + haul + " Head Miner: " + computerNumber);
 
 };
 

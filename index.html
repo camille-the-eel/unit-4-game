@@ -6,7 +6,6 @@
     <title>Gem </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" /> -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 <body>
@@ -21,10 +20,12 @@
     </div>
 
     <div class="play">
-        <h2>
+        <button>
             PLAY
             <img src="assets/imgs/crystal_assets_red.svg">
-        </h2>
+        </button>
+
+        <img src="assets/imgs/crystal_assets_girl.svg" id="girl">
 
         <div class="crystal-holder"></div>
             <div id="red" class="crystal">
@@ -33,19 +34,20 @@
             <div id="yellow" class="crystal">
                 <img src="assets/imgs/crystal_assets_yellow.svg">
             </div>
-            <div id="blue" class="crystal">
+            <div id="green" class="crystal">
                 <img src="assets/imgs/crystal_assets_green.svg">
             </div>
-            <div id="orange" class="crystal">
+            <div id="blue" class="crystal">
                 <img src="assets/imgs/crystal_assets_blue.svg">
             </div>
         </div>
+
     </div>
 
     <div class="underground">
         <div class="numbers">
-            <h2>Head Miner's Haul: <span id="computerNumber"></span></h2>
-            <h2>Your Haul: <span id="score"></span></h2>
+            <h2>Head Miner's Haul: <span id="computerHaul"></span></h2>
+            <h2 id="haul">Your Haul: <span id="yourHaul"></span></h2>
         </div>
 
         <div class="score">

@@ -26,17 +26,17 @@ body {
     background-origin: content-box;
 
     h1 {
-    font-size: 100px;
-    margin: 0px;
-    padding-top: 11vh;
-    padding-bottom: 5vh;
+        font-size: 100px;
+        margin: 0px;
+        padding-top: 11vh;
+        padding-bottom: 5vh;
     }
 
     p {
-    padding-top: 1vh;
-    max-width: 775px;
-    margin: auto;
-    font-size: 30px;
+        padding-top: 1vh;
+        max-width: 775px;
+        margin: auto;
+        font-size: 30px;
     }
 }
 
@@ -46,32 +46,46 @@ body {
     height: 190px;
     background-repeat: repeat-x;
     position: relative;
+    z-index: 2;
 }
 
 .play {
     background-color: $dark-blue;
-    font-weight: 400;
-    font-style: normal;
-    color: #ffffff;
-    text-align: center;
-    font-size: 45px;
-    letter-spacing: .15px;
     margin-top: -120px;
-    height: 650px;
+    height: 61vh;
+    position: relative;
+    text-align: center;
 
-    h2 {
-    font-family: $font-stack;
-    padding-top: 10vh;
+    button {
+        font-family: $font-stack;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffffff;
+        font-size: 65px;
+        letter-spacing: .15px;
+        margin-top: 12vh;
     }
 
     img {
-    width: 60px;
+        width: 60px;
+    }
+
+    #girl {
+        width: 125px;
+        position: absolute;
+        bottom: 40px;
+        right: 60px;
+        z-index: 10;
     }
 }
 
 .crystal {
-    width: 75px;
+    width: 135px;
     display: inline-block;
+
+    img {
+        width: 100px;
+    }
 }
 
 .underground {
@@ -80,25 +94,36 @@ body {
     height: 450px;
     background-repeat: repeat-x;
     position: relative;
+    overflow: hidden;
     margin-top: -50px;
 
     div > h2 {
-    font-family: $font-stack;
-    color: $brown;
-    letter-spacing: .15px;
-    margin: 0px;
+        font-family: $font-stack;
+        color: $brown;
+        letter-spacing: .15px;
+        margin: 0px;
     }
 
     .numbers {
-    padding-top: 6vh;
-    padding-right: 3vh;
-    font-size: 30px;
-    text-align: right;
+        padding-top: 6vh;
+        padding-right: 3vh;
+        font-size: 50px;
+        text-align: right;
     }
 
     .score {
-    padding-left: 3vh;
-    font-size: 25px;
+        padding-left: 3vh;
+        font-size: 45px;
+        position: absolute;
+        bottom: 3vh;
+    }
+
+    #haul {
+        padding-top: 1vh;
+    }
+
+    #losses {
+        padding-top: .75vh;
     }
 
 }
