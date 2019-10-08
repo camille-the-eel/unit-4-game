@@ -91,3 +91,12 @@ a {
     padding-top: 1vh; }
   .underground #losses {
     padding-top: .75vh; }
+  .underground #footer {
+    font-size: 15px;
+    position: absolute;
+    right: 3vh;
+    bottom: 3vh;
+    font-family: cubano, sans-serif;
+    color: #492d14;
+    letter-spacing: .15px;
+    margin: 0px; }

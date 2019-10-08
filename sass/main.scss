@@ -137,5 +137,16 @@ a {
         padding-top: .75vh;
     }
 
+    #footer {
+        font-size: 15px;
+        position: absolute;
+        right: 3vh;
+        bottom: 3vh;
+        font-family: $font-stack;
+        color: $brown;
+        letter-spacing: .15px;
+        margin: 0px;
+    }
+
 }
 
